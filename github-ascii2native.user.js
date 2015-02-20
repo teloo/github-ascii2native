@@ -14,7 +14,7 @@
 
     for(var i = 0; i < children.length; i++){
       var child = children.item(i);
-      if(child.nodeType == 3){
+      if(child.nodeType === 3){
         child.nodeValue = child.nodeValue.replace(/\\u[0-9a-fA-F]{4}/g, function(match) {
           var charCode = parseInt(match.substring(2, 6), 16);
           return String.fromCharCode(charCode);
